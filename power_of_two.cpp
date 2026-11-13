@@ -24,20 +24,16 @@ int main() {
 
         // Verify if number is a decimal
         if (user_num == floatuser_num) {
-            // Number is a negative integer
-            if (user_num <= 0) {
-                for (counter = -1; counter >= user_num; counter--) {
-                    square_ans = pow(counter, 2);
-                    std::cout << counter << " ^ 2 = "
-                     << square_ans << std::endl;
-                }
-            // Number is a positive integer
-            } else {
+            if (user_num >= 0) {
+        // Number is a positive integer
             for (counter = 1; counter <= user_num; counter++) {
                 square_ans = pow(counter, 2);
                 std::cout << counter << " * 2 = " << square_ans << std::endl;
             }
-                }
+        } else {
+            std::cout << user_num << " is not a positive integer. "
+                                 "Please, enter a new one";
+        }
         // If the number is a decimal, tell the user to enter a new one
         } else {
         std::cout << floatuser_num << " is not a whole number. "
@@ -48,5 +44,5 @@ int main() {
 } catch (std::invalid_argument) {
         std::cout << usernum_str << " is not a valid integer";
     }
-std::cout << "Thanks for using the code";
+std::cout << "\nThanks for using the code";
 }

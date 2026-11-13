@@ -26,9 +26,9 @@ int main() {
         if (user_num == floatuser_num) {
             if (user_num >= 0) {
         // Number is a positive integer
-            for (counter = 1; counter <= user_num; counter++) {
+            for (counter = 0; counter <= user_num; counter++) {
                 square_ans = pow(counter, 2);
-                std::cout << counter << " * 2 = " << square_ans << std::endl;
+                std::cout << counter << " ^ 2 = " << square_ans << std::endl;
             }
         } else {
             std::cout << user_num << " is not a positive integer. "
